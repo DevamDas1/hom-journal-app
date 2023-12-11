@@ -30,4 +30,6 @@ submitButton.addEventListener("click", async () => {
   } else {
     console.log("error creating entry");
   }
+
+  window.location = "/";
 });
