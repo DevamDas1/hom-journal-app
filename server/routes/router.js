@@ -45,10 +45,8 @@ route.post("/createEntry", async (req, res) => {
   res.status(201).end();
 });
 
-route.get("/editEntry/:id", async (req, res) => {
-  const entry = await Entry.findById(req.params.id);
-  console.log(entry);
-  res.send(entry);
+route.get("/editEntry", async (req, res) => {
+  res.render("editEntry");
 });
 
 // delegate all authentication to the auth.js router
